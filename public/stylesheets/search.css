@@ -2,3 +2,82 @@
     background-color: #f4511e; /* Orange */
     height: 50%;
 }
+
+.search__body{
+    background-image: url("http://janaus.com/images/Movie.jpg");
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: auto 100%;
+}
+
+.search__parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search_well{
+    border-radius: 0px;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.75);
+}
+
+.search__title{
+    font-family: 'Open Sans', sans-serif;
+    margin:5px;
+    font-weight: 800;
+}
+
+.search__subtitle{
+    font-family: 'Open Sans', sans-serif;
+    margin:5px;
+    font-weight: 600;
+}
+
+.result__body{
+    background-image: url("http://janaus.com/images/Movie.jpg");
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: auto 100%;
+}
+
+
+
+.result__header{
+    font-family: 'Open Sans', sans-serif;
+    margin:5px;
+    font-weight: 800;
+    text-shadow: 1px 1px #000;
+    color:#fff;
+}
+
+.result__title{
+    font-family: 'Open Sans', sans-serif;
+    margin:5px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.result__year{
+    font-family: 'Open Sans', sans-serif;
+    margin:5px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.result__well{
+    margin:5px;
+    padding: 5px;
+}
+
+.result__img{
+    /*height: 300px;*/
+    /*width: auto;*/
+    max-width: 100%; 
+    height: auto;
+    display:block;
+}

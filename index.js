@@ -7,7 +7,11 @@ app.set("view engine", "ejs");
 
 app.get("/results", function(req, res){
     var search = req.query.search;
-    var url = 'http://www.omdbapi.com/?apikey=thewdb&s='+ search;
+    var type = '&type=' + req.query.type;
+    var year = '';
+    if(req.query.year)
+        year = '&y=' + req.query.year;
+    var url = 'http://www.omdbapi.com/?apikey=thewdb&s='+ search + type + year;
     console.log(url);
     request(url, function (error, response, body) {
         if(error){
@@ -16,7 +20,7 @@ app.get("/results", function(req, res){
         else if(response.statusCode == 200){
             //shit worked
             var data = JSON.parse(body);
-            console.log("Get request sucessful"); // Print the HTML for the Google homepage.
+            console.log("Get request sucessful", data); // Print the HTML for the Google homepage.
             res.render("results", {data: data});
         }
         else

@@ -1,21 +1,42 @@
 <html lang="en">
 <head>
-  <title>Bootstrap Theme Company</title>
+  <title>Tip of my tounge...</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link rel="stylesheet" href="./stylesheets/search.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 
-<body>
-    <div class = 'jumbotron  text-center'>
-    <h1>Search for a movie</h1>
-    
-    <form action="/results" method="GET">
-        <input class='form-control' type="text" placeholder="search" name="search">
-        <input class='btn btn-danger' type="submit">
-    </form>
+<body class="search__body search__parent">
+    <div class="container search__child">
+        <div class="row">
+            <div class="col-lg-3 col-1"></div>
+            <div class="col-lg-6 col-10 ">
+                <div class='well search_well text-center'>
+                    <h1 class="search__title">It's on the tip of my tounge...</h1>
+                    <form action="/results" method="GET">
+                        
+                        <h2 class="search__subtitle">The title is something like...</h2>
+                        <input class='form-control' type="text" placeholder="title" name="search">
+                        
+                        <h2 class="search__subtitle">and its a...</h2>
+                        <select class="form-control" name="type">
+                          <option value="movie">Movie</option>
+                          <option value="series">Series</option>
+                          <option value="episode">Episode</option>
+                        </select>
+                        
+                        <h2 class="search__subtitle">and it came out in...</h2>
+                        <input class='form-control' type="text" placeholder="year" name="year">
+                        
+                        <input class='btn btn-danger' type="submit" value="Find it for me">
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-3 col-1"></div>
+        </div>
     </div>
 </body>

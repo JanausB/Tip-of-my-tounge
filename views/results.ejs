@@ -1,7 +1,44 @@
-<body>
-    <h1>results page</h1>
+<html lang="en">
+<head>
+  <title>Tip of my tounge...</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="./stylesheets/search.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body class='result__body search__parent'>
+    <div class="row">
+        <div class="col-lg-3 col-1"></div>
+        <div class="col-lg-6 col-10 ">
+            <h1 class="result__header">I think I got it...</h1>
+            
+            <% data["Search"].forEach(function(movie){ %>
+                <div class="well result__well">
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <% if(movie["Poster"] == "N/A"){%>
+                                <img src="https://www.studiobinder.com/wp-content/uploads/2017/12/Movie-Poster-Template-Dark-with-Image.jpg?x81279" class="result__img" alt="<%= movie["Poster"]; %>">
+                            <% } else {%>
+                                <img src="<%= movie["Poster"]; %>" class="result__img" alt="<%= movie["Poster"]; %>">
+                            <% } %>
+                        </div>
+                        <div class="col-12 col-lg-8">
+                            <p class="result__title"><%= movie["Title"]; %></p>
+                            <p class="result__year"><%= movie["Year"]; %></p>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+            
+            
+        </div>
+        <div class="col-lg-3 col-1"></div>
+    </div>
     
-    <% data["Search"].forEach(function(movie){ %>
-        <li><%= movie["Title"]; %></li>
-    <% }); %>
+    
+    
+    
 </body>
